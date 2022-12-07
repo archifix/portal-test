@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Roboto Condensed Regular';
+	src: url('./components/styles/fonts/RobotoCondensed-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto Condensed Light';
+	src: url('./components/styles/fonts/RobotoCondensed-Light.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto Condensed Bold';
+	src: url('./components/styles/fonts/RobotoCondensed-Bold.ttf');
+}
+
+::after,
+::before {
+	-webkit-box-sizing: border-box;
+	-mez-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.text {
+	font-family: 'Roboto Condensed Regular', sans-serif;
+	font-size: 30px;
+}
+
+dropdown button:focus + .dropdown-menu,
+.dropdown-menu:hover {
+	display: block;
+	border-radius: 1px;
+}
+
+.accordion span{
+	display: flex;
+	font-family: "Roboto Condensed Regular", sans-serif;
+  	font-size: 16px;
+	justify-content: center;
+}
+
+.accordion button{
+	font-family: "Roboto Condensed Regular", sans-serif;
+  	font-size: 16px;
+	  display: grid;
+		grid-template-columns: 1fr 23px;
+		text-align: center;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
