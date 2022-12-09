@@ -1,13 +1,16 @@
+import { Top } from "components/ui-kit/Top-bar/Top"
 import React from "react"
+import { Link } from "react-router-dom"
 //import { useLocation } from "react-router-dom";
-import logo from "../assets/images/yuo.png"
+import logo from "../../ui/assets/images/yuo.png"
+import Button from "../../ui/button/Button"
 
 const PageHeader: React.FC = () => {
   return (
     <>
-      <header className="bg-fixed top-0 z-30 w-full px-2 shadow-sm">
-        <div className="flex items-center mx-auto max-w-7xl">
-          <a href="/">
+      <header className="bg-fixed top-0 z-30 w-full shadow-sm">
+        <div className="flex items-center max-w-full mx-10">
+          <Link to="/">
             <img
               src={logo}
               height="96"
@@ -16,710 +19,70 @@ const PageHeader: React.FC = () => {
               alt="Logo"
             />
             <span className="logo"></span>
-          </a>
-          <div className="title ">
+          </Link>
+          <div className="title font-bold">
             <h1>Южный округ</h1>
             <h3>войск национальной гвардии Российской Федерации</h3>
           </div>
         </div>
       </header>
-      <main id="topBar" className="container mx-auto">
-        <nav className="navbar navbar-expand-lg">
-          <div
-            className="navbar-collapse collapse grow items-center mx-auto flex-col-reverse"
-            id="navbarSupportedContentY"
-          >
-            <ul className="navbar-nav ">
-              <a href="/">
-                <button
-                  type="button"
-                  className="
-                          inline-block
-                          px-6
-                          py-2.5
-                          bg-transparent
-                          text-black
-                          font-medium text-xs
-                          leading-tight
-                          uppercase
-                          rounded
-                          focus:outline-none
-                          focus:ring-0
-                          transition
-                          duration-300
-                          ease-in-out
-                          "
-                >
-                  Главная
-                </button>
-              </a>
-              <a href="/">
-                <button
-                  type="button"
-                  className="
-                          inline-block
-                          px-6
-                          py-2.5
-                          bg-transparent
-                          text-black
-                          font-medium text-xs
-                          leading-tight
-                          uppercase
-                          rounded
-                          focus:outline-none
-                          focus:ring-0
-                          transition
-                          duration-300
-                          ease-in-out
-                          "
-                >
-                  СЭД
-                </button>
-              </a>
+      <Top/>
+      {/* <main
+        id="topBar"
+        className="flex items-center justify-between mx-10 max-h-max"
+      >
+        <nav className="flex items-center h-4 mr-8">
+          <Link to="/">
+            <Button>Главная</Button>
+          </Link>
+          <Link to="/">
+            <Button>Тех.поддержка</Button>
+          </Link>
+          <Link to="/">
+            <Button>СЭД</Button>
+          </Link>
+          <Link to="/">
+            <Button>Почта</Button>
+          </Link>
+          <Link to="/">
+            <Button>Справочные системы</Button>
+          </Link>
 
-              <button
-                type="button"
-                className="
-                          inline-block
-                          px-6
-                          py-2.5
-                          bg-transparent
-                          text-black
-                          font-medium text-xs
-                          leading-tight
-                          uppercase
-                          rounded
-                          focus:outline-none
-                          focus:ring-0
-                          transition
-                          duration-300
-                          ease-in-out
-                          "
-              >
-                Тех. поддержка
-              </button>
-
-              <button
-                type="button"
-                className="
-                          inline-block
-                          px-6
-                          py-2.5
-                          bg-transparent
-                          text-black
-                          font-medium text-xs
-                          leading-tight
-                          uppercase
-                          rounded
-                          focus:outline-none
-                          focus:ring-0
-                          transition
-                          duration-300
-                          ease-in-out
-                          "
-              >
-                Почта
-              </button>
-
-              <div className="flex justify-center">
-                <div>
-                  <div className="dropdown relative">
-                    <button
-                      className="dropdown-toggle px-6 py-2.5
-                                    text-black
-                                    font-medium
-                                    text-xs
-                                    leading-tight
-                                    uppercase
-                                    rounded
-                                    shadow-md
-                                    transition
-                                    duration-150
-                                    ease-in-out
-                                    flex
-                                    items-center
-                                    whitespace-nowrap
-                                    "
-                      type="button"
-                      id="dropdownMenuButton1"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Справочные системы
-                    </button>
-                    <ul
-                      className="
-                                    dropdown-menu
-                                    min-w-max
-                                    absolute
-                                    hidden
-                                    bg-white
-                                    text-base
-                                    z-50
-                                    float-left
-                                    py-2
-                                    list-none
-                                    text-left
-                                    rounded-lg
-                                    shadow-lg
-                                    mt-1
-                                    m-0
-                                    bg-clip-padding
-                                    border-none
-                                    "
-                      aria-labelledby="dropdownMenuButton1"
-                    >
-                      <li>
-                        <a
-                          className="
-                                        dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                          href="/"
-                        >
-                          Шаблоны форм статической отчетности
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="
-                                        dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                          href="/"
-                        >
-                          Шаблоны форм статической отчетности
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="
-                                        dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                          href="/"
-                        >
-                          Another action
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="
-                                        dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                          href="/"
-                        >
-                          Something else here
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-center">
-                <div className="dropdown relative">
-                  <button
-                    className="dropdown-toggle px-6 py-2.5
-                                    text-black
-                                    font-medium
-                                    text-xs
-                                    leading-tight
-                                    uppercase
-                                    rounded
-                                    shadow-md
-                                    transition
-                                    duration-150
-                                    ease-in-out
-                                    flex
-                                    items-center
-                                    whitespace-nowrap
-                                    "
-                    type="button"
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Справочные материалы
-                  </button>
-                  <ul
-                    className="
-                                    dropdown-menu
-                                    min-w-max
-                                    absolute
-                                    hidden
-                                    bg-white
-                                    text-base
-                                    z-50
-                                    float-left
-                                    py-2
-                                    list-none
-                                    text-left
-                                    rounded-lg
-                                    shadow-lg
-                                    mt-1
-                                    m-0
-                                    bg-clip-padding
-                                    border-none
-                                    "
-                    aria-labelledby="dropdownMenuButton1"
-                  >
-                    <li>
-                      <a
-                        className="
-                                        dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                        href="/"
-                      >
-                        Action
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="
-                                        dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                        href="/"
-                      >
-                        Another action
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="
-                                        dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                        href="/"
-                      >
-                        Something else here
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="flex justify-center">
-                <div>
-                  <div className="dropdown relative">
-                    <button
-                      className="
-                                        dropdown-toggle
-                                        px-6
-                                        py-2.5
-                                        text-black
-                                        font-medium
-                                        text-xs
-                                        leading-tight
-                                        uppercase
-                                        rounded
-                                        shadow-md
-                                        transition
-                                        duration-150
-                                        ease-in-out
-                                        flex
-                                        items-center
-                                        whitespace-nowrap
-                                        "
-                      type="button"
-                      id="dropdownMenuButton1"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="true"
-                    >
-                      Образцы документов
-                    </button>
-                    <ul
-                      className="
-                        dropdown-menu 
-                        min-w-max
-                        absolute
-                        hidden
-                        bg-white
-                        text-base
-                        z-50
-                        float-left
-                        py-2
-                        list-none
-                        text-left
-                        rounded-lg
-                        shadow-lg
-                        mt-1
-                        m-0
-                        bg-clip-padding
-                        border-none
-                        "
-                      aria-labelledby="dropdownMenuButton1"
-                    >
-                      <li>
-                        <a
-                          className="
-                                            dropdown-item
-                                            text-sm
-                                            py-2
-                                            px-4
-                                            font-normal
-                                            block
-                                            w-full
-                                            whitespace-nowrap
-                                            bg-transparent
-                                            text-gray-700
-                                            hover:text-red-700
-                                            hover:bg-gray-100
-                                            "
-                          href="/"
-                        >
-                          Action
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="
-                                            dropdown-item
-                                            text-sm
-                                            py-2
-                                            px-4
-                                            font-normal
-                                            block
-                                            w-full
-                                            whitespace-nowrap
-                                            bg-transparent
-                                            text-gray-700
-                                            hover:text-red-700
-                                            hover:bg-gray-100
-                                            "
-                          href="/"
-                        >
-                          Another action
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="
-                                            dropdown-item
-                                            text-sm
-                                            py-2
-                                            px-4
-                                            font-normal
-                                            block
-                                            w-full
-                                            whitespace-nowrap
-                                            bg-transparent
-                                            text-gray-700
-                                            hover:text-red-700
-                                            hover:bg-gray-100
-                                            "
-                          href="/"
-                        >
-                          Something else here
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="dropdown relative">
-                <button
-                  className="dropdown-toggle px-6 py-2.5
-                                    text-black
-                                    font-medium
-                                    text-xs
-                                    leading-tight
-                                    uppercase
-                                    rounded
-                                    shadow-md
-                                    transition
-                                    duration-150
-                                    ease-in-out
-                                    flex
-                                    items-center
-                                    whitespace-nowrap
-                                    "
-                  type="button"
-                  id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Центр ИТ ЮО
-                </button>
-                  
-                <ul
-                  className="
-                                    dropdown-menu
-                                    min-w-max
-                                    absolute
-                                    hidden
-                                    bg-white
-                                    text-base
-                                    z-50
-                                    float-left
-                                    py-2
-                                    list-none
-                                    text-left
-                                    rounded-lg
-                                    shadow-lg
-                                    mt-1
-                                    m-0
-                                    bg-clip-padding
-                                    border-none
-                                    "
-                  aria-labelledby="dropdownMenuButton1"
-                >
-                  <li>
-                    <a
-                      className="
-                                        dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                      href="cit"
-                    >
-                      Информационное обеспечение
-                    </a>
-                    
-                  </li>
-                  <li>
-                    <a
-                      className="
-                                        dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                      href="/"
-                    >
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="
-                                        dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                      href="/"
-                    >
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="dropdown relative">
-                <button
-                  className="dropdown-toggle px-6 py-2.5
-                                    text-black
-                                    font-medium
-                                    text-xs
-                                    leading-tight
-                                    uppercase
-                                    rounded
-                                    shadow-md
-                                    transition
-                                    duration-150
-                                    ease-in-out
-                                    flex
-                                    items-center
-                                    whitespace-nowrap                                    
-                                    "
-                  type="button"
-                  id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Военный совет ЮО
-                </button>
-                <ul
-                  className="
-                                    dropdown-menu
-                                    min-w-max
-                                    absolute
-                                    hidden
-                                    bg-white
-                                    text-base
-                                    z-50
-                                    float-left
-                                    py-2
-                                    list-none
-                                    text-left
-                                    rounded-lg
-                                    shadow-lg
-                                    mt-1
-                                    m-0
-                                    bg-clip-padding
-                                    border-none
-                                    "
-                  aria-labelledby="dropdownMenuButton1"
-                >
-                  <li>
-                    <a
-                      className="
-                                        dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                      href="/"
-                    >
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="
-                                        dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                      href="/"
-                    >
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <li>
-                      <a
-                        className="
-                              dropdown-item
-                                        text-sm
-                                        py-2
-                                        px-4
-                                        font-normal
-                                        block
-                                        w-full
-                                        whitespace-nowrap
-                                        bg-transparent
-                                        text-gray-700
-                                        hover:text-red-700
-                                        hover:bg-gray-100
-                                        "
-                        href="/"
-                      >
-                        Something else here
-                      </a>
-                    </li>
-                  </li>
-                </ul>
-              </div>
-            </ul>
-          </div>
+          <Link to="/">
+            <Button>Справочные материалы</Button>
+          </Link>
+          <Link to="/">
+            <Button>Образцы документов</Button>
+          </Link>
+          <Link to="/">
+            <Button>Центр ИТ ЮО</Button>
+          </Link>
+          <Link to="/">
+            <Button>Военный совет ЮО</Button>
+          </Link>
         </nav>
-      </main>
+        <nav className="flex items-end justify-end">
+          <Link to="/login">
+            <Button>Вход</Button>
+          </Link>
+        </nav>
 
-      <hr className="border-1.5 border-red-700" />
+        <Menu menuButton={<MenuButton>Open menu</MenuButton>}>
+        <MenuItem>New File</MenuItem>
+        <SubMenu label="Open">
+          <MenuItem>index.html</MenuItem>
+          <MenuItem>example.js</MenuItem>
+          <SubMenu label="Styles">
+            <MenuItem>about.css</MenuItem>
+            <MenuItem>home.css</MenuItem>
+            <MenuItem>index.css</MenuItem>
+          </SubMenu>
+        </SubMenu>
+        <MenuItem>Save</MenuItem>
+        </Menu>
+      </main> */}
+
+      <hr className="border-1.5 border-red-900" />
     </>
   )
 }
