@@ -1,13 +1,10 @@
-import { Top } from "components/ui-kit/Top-bar/Top"
-import React from "react"
+import { Menu } from "components/ui-kit/Menu-bar/Menu"
 import { Link } from "react-router-dom"
-//import { useLocation } from "react-router-dom";
 import logo from "../../ui/assets/images/yuo.png"
-import Button from "../../ui/button/Button"
 
 const PageHeader: React.FC = () => {
   return (
-    <>
+    <div className="container">
       <header className="bg-fixed top-0 z-30 w-full shadow-sm">
         <div className="flex items-center max-w-full mx-10">
           <Link to="/">
@@ -25,65 +22,17 @@ const PageHeader: React.FC = () => {
             <h3>войск национальной гвардии Российской Федерации</h3>
           </div>
         </div>
-      </header>
-      <Top/>
-      {/* <main
-        id="topBar"
-        className="flex items-center justify-between mx-10 max-h-max"
-      >
-        <nav className="flex items-center h-4 mr-8">
-          <Link to="/">
-            <Button>Главная</Button>
-          </Link>
-          <Link to="/">
-            <Button>Тех.поддержка</Button>
-          </Link>
-          <Link to="/">
-            <Button>СЭД</Button>
-          </Link>
-          <Link to="/">
-            <Button>Почта</Button>
-          </Link>
-          <Link to="/">
-            <Button>Справочные системы</Button>
-          </Link>
-
-          <Link to="/">
-            <Button>Справочные материалы</Button>
-          </Link>
-          <Link to="/">
-            <Button>Образцы документов</Button>
-          </Link>
-          <Link to="/">
-            <Button>Центр ИТ ЮО</Button>
-          </Link>
-          <Link to="/">
-            <Button>Военный совет ЮО</Button>
-          </Link>
-        </nav>
-        <nav className="flex items-end justify-end">
+        <nav className="flex items-end justify-end mr-10">
           <Link to="/login">
-            <Button>Вход</Button>
+            <button className="inline-block rounded-md transition duration-200 text-sm px-4 text-white bg-red-800 hover:bg-red-900">
+              Вход
+            </button>
           </Link>
         </nav>
-
-        <Menu menuButton={<MenuButton>Open menu</MenuButton>}>
-        <MenuItem>New File</MenuItem>
-        <SubMenu label="Open">
-          <MenuItem>index.html</MenuItem>
-          <MenuItem>example.js</MenuItem>
-          <SubMenu label="Styles">
-            <MenuItem>about.css</MenuItem>
-            <MenuItem>home.css</MenuItem>
-            <MenuItem>index.css</MenuItem>
-          </SubMenu>
-        </SubMenu>
-        <MenuItem>Save</MenuItem>
-        </Menu>
-      </main> */}
-
+      </header>
+      <Menu />
       <hr className="border-1.5 border-red-900" />
-    </>
+    </div>
   )
 }
 
